@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+def motifVersion = '0.3.8'
+dependencies {
+    //Local maven setup
+    implementation "com.uber.motif:motif:${motifVersion}"
+    annotationProcessor "com.uber.motif:motif-compiler:${motifVersion}"
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'com.google.truth:truth:1.1.3'
+}
